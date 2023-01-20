@@ -33,9 +33,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        let second = Int(slider.value * 100)
-        timeLabel.text = "\(second)s"
-        num = second
+        num = Int(sender.value * 100)
+        timeLabel.text = "\(num)s"
         
         if num == 0 {
             startButton.isUserInteractionEnabled = false
