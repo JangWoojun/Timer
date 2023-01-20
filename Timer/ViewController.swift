@@ -29,12 +29,19 @@ class ViewController: UIViewController {
         timeLabel.text = "Please select a time"
         resetButton.layer.borderWidth = 1
         resetButton.layer.borderColor = UIColor.black.cgColor
+        startButton.isUserInteractionEnabled = false
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         let second = Int(slider.value * 100)
         timeLabel.text = "\(second)s"
         num = second
+        
+        if num == 0 {
+            startButton.isUserInteractionEnabled = false
+        } else {
+            startButton.isUserInteractionEnabled = true
+        }
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
@@ -48,6 +55,7 @@ class ViewController: UIViewController {
                 timer?.invalidate()
                 AudioServicesPlayAlertSound(SystemSoundID(1322))
                 timeLabel.text = "End"
+                startButton.isUserInteractionEnabled = false
             }
         })
     }
