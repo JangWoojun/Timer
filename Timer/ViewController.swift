@@ -16,14 +16,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        resetButton.layer.borderWidth = 1
-        resetButton.layer.borderColor = UIColor.black.cgColor
         configureUI()
     }
 
     func configureUI() {
         timeLabel.text = "0s"
+        resetButton.layer.borderWidth = 1
+        resetButton.layer.borderColor = UIColor.black.cgColor
     }
     
 }
