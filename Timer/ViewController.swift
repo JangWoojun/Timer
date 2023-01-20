@@ -53,8 +53,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
-        timeLabel.text = "0s"
+        timeLabel.text = "Please select a time"
         slider.setValue(0.5, animated: true)
+        timer?.invalidate()
+        num = 0
     }
     
     
