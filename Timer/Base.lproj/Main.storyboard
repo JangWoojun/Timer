@@ -118,6 +118,7 @@
                     <connections>
                         <outlet property="resetButton" destination="Tp8-0b-Uf4" id="cGJ-yT-nv6"/>
                         <outlet property="startButton" destination="qWE-vQ-ZND" id="3Gl-Fo-N0s"/>
+                        <outlet property="timeLabel" destination="CuW-yX-jh6" id="e6z-q7-ez3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
